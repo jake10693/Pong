@@ -101,7 +101,7 @@ class Pong
             '111100111101111', // 6
             '111001001001001', // 7
             '111101111101111', // 8
-            '111101111001001'  // 9
+            '111101111001001',  // 9
         ].map(str => {
             const canvas = document.createElement('canvas');
             canvas.height = this.CHAR_PIXEL * 5;
@@ -109,7 +109,7 @@ class Pong
             const context = canvas.getContext('2d');
             context.fillStyle = '#fff';
             str.split('').forEach((fill, i) => {
-                if (fill === 1) {
+                if (fill === '1') {
                     context.fillRect(
                         (i % 3) * this.CHAR_PIXEL, 
                         (i / 3 | 0) * this.CHAR_PIXEL, 
