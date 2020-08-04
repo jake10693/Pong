@@ -214,4 +214,4 @@ canvas.addEventListener('click', event => {
     pong.start();
 });
 
-// https://www.youtube.com/watch?v=ju09womACpQ @ 46:00 / 52:00
+// https://www.youtube.com/watch?v=ju09womACpQ @ 50:25 / 52:00
