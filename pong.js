@@ -189,7 +189,6 @@ class Pong
             const playerId = this.ball.vel.x < 0 | 0;
             this.players[playerId].score++;
             this.reset();
-            console.log(playerId);
         }
         if (this.ball.top < 0 || this.ball.bottom > this._canvas.height) {
             this.ball.vel.y = -this.ball.vel.y;
@@ -207,7 +206,8 @@ const canvas = document.getElementById('pong');
 const pong = new Pong(canvas);
 
 canvas.addEventListener('mousemove', event => {
-    pong.players[0].pos.y = event.offsetY
+    const scale = event.offsetY / event.target.getBoundingClientRect().height;
+    pong.players[0].pos.y = canvas.height * scale;
 });
 
 canvas.addEventListener('click', event => {
