@@ -12,8 +12,8 @@ class Vec
     set len(value)
     {
         const fact = value / this.len;
-        this.x += fact;
-        this.y += fact;
+        this.x *= fact;
+        this.y *= fact;
     }
 }
 
@@ -96,7 +96,10 @@ class Pong
     {
         if (player.left < ball.right && player.right > ball.left &&
             player.top < ball.bottom && player.bottom > ball.top) {
-                ball.vel.x = -ball.vel.x
+                const len = ball.vel.len;
+                ball.vel.x = -ball.vel.x;
+                ball.vel.y += 300 * (Math.random() - .5);
+                ball.vel.len *= 1.05;
             }
     }
     draw()
@@ -124,7 +127,7 @@ class Pong
     }
     start()
     {
-        if (this.ball.vel.x === 0 && this.ball.vel.y ===0) {
+        if (this.ball.vel.x === 0 && this.ball.vel.y === 0) {
             this.ball.vel.x = 300 * (Math.random() > .5 ? 1 : -1);
             this.ball.vel.y = 300 * (Math.random() * 2 - 1);
             this.ball.vel.len = 200;
