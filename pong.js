@@ -1,7 +1,7 @@
 // Perfect AI
 alert("Use the mouse to control the left paddle!");
 alert("Left click to start the game!");
-alert("Careful! The bot is very good!")
+alert("Careful! The bot is very good!");
 class Vec 
 {
     constructor(x=0, y=0)
