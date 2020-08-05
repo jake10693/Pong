@@ -1,5 +1,6 @@
 // Perfect AI
-
+alert("use the mouse to control the left paddle");
+alert("left click to start the game")
 class Vec 
 {
     constructor(x=0, y=0)
