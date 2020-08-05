@@ -1,3 +1,5 @@
+// Perfect AI
+
 class Vec 
 {
     constructor(x=0, y=0)
@@ -213,5 +215,3 @@ canvas.addEventListener('mousemove', event => {
 canvas.addEventListener('click', event => {
     pong.start();
 });
-
-// https://www.youtube.com/watch?v=ju09womACpQ @ 50:25 / 52:00
